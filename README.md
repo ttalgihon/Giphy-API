@@ -1,4 +1,5 @@
-![Gif of the Giphy logo](https://media.giphy.com/media/3xz2BDFvxop2BfAQoM/giphy.gif =250x250)
+<img src="https://media.giphy.com/media/3xz2BDFvxop2BfAQoM/giphy.gif" width="250" height="250" alt-text="Gif of the Giphy logo"/>
+
 # Giphy-API 
 An AJAX and API webpage that interacts with the [GIPHY API](https://developers.giphy.com/).
 
