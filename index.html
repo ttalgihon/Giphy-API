@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>GIPHY-API-HM</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" defer></script>
+    <script src="main.js" defer></script>
+</head>
+<body>
+
+    <!-- This holds the navbar where the search bar is placed. -->
+    <nav class="navbar navbar-light bg-light">
+        <span class="navbar-brand mb-0 h1">GIF Navbar</span>
+        <form class="form-inline">
+            <label for="submitButton">Search for an animal</label>
+            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+            <button id="submitButton" class="btn btn-outline-success my-2 my-sm-0" type="submit">Submit</button>
+        </form>
+    </nav>
+
+    <!-- This holds the half container for the gif images and the buttons -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                images div
+                <div id="giphyDivImages"></div>
+            </div>
+            <div class="col">
+                buttons div
+                <div id="topButtons"></div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
