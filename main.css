@@ -1,0 +1,10 @@
+label {
+padding-right: 5px;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+div.container-fluid {
+background-color: rgb(229,233,239)
+}
+button.btn.btn-outline-info.animal-btn {
+margin: 2px 3px 2px 2px;    
+}

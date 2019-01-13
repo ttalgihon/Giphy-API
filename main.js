@@ -1,6 +1,6 @@
 $(document).ready(function(){
     // An array that hold a list of animals, the array will be used to create buttons
-    var animalArray = ["dog","cat","hedgehog","rabbit","hamster"];
+    var animalArray = ["dog","cat","hedgehog","rabbit","hamster","fox","wolf","penguin","kangaroo"];
     
     // A function that adds the array above as button elements to the webpage.
     function makingButtons(){
@@ -42,13 +42,18 @@ $(document).ready(function(){
             url: queryURL,
             method: "GET"
         }).then(function(x){
+            $(".giphyDivImages").text(JSON.stringify(X));
+            /// Storing an array of results in the 'result' var
             var result = x.data;
 
             console.log("qurl-4", queryURL);
             console.log("meta-5", x);
 
+            // Looping over every result item
             for (var u = 0; u < result.length; u++) {
+                // Creating a div for the gif images
                 var anDIV = $("<div class=\"animalItem\"></div>")
+                // grabs the rating of the image [PG , PG-13 , etc..]
                 var rating = result[u].rating;
                 var p = $("<p>").text("Rating: " + rating);
 
@@ -57,31 +62,18 @@ $(document).ready(function(){
 
 
                 var anIMG = $("<img>");
-                anIMG.attr("src", "still");
-                anIMG.attr("data-still:", "still");
-                anIMG.attr("data-animate", "animated")
-                anIMG.attr("data-state", "still");
+                anIMG.attr("src", still);
+                anIMG.attr("data-still:", still);
+                anIMG.attr("data-animate", animated)
+                anIMG.attr("data-state", still);
                 anIMG.addClass("gifImage");
                 
                 anDIV.append(p);
                 anDIV.append(anIMG);
                 
-                $(".giphyDivImages").append(anDIV);
+                $(".giphyDivImages").prepend(anDIV);
             }
         })
-    })
-
-    $(document).click(".gifImage", function(){
-        var state = $(this).attr("data-state");
-    
-        if (state === "still"){
-            $(this).attr("src",$(this).attr("data-animate"));
-            $(this).attr("data-state", "animate");
-        }
-        else {
-            $(this).attr("src", $(this).attr("data-still"));
-            $(this).attr("data-state","still");
-        }
     })
     makingButtons()
 }); 
