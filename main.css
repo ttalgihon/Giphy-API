@@ -2,9 +2,20 @@ label {
 padding-right: 5px;
 font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+div.giphyDivImages {
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+background: linear-gradient(to right,red, orange, yellow, green, cyan, blue, violet, purple);
+background-clip: inherit;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+font-size: 210%;
+}
 div.container-fluid {
 background-color: rgb(229,233,239)
 }
 button.btn.btn-outline-info.animal-btn {
-margin: 2px 3px 2px 2px;    
+margin: 2px 3px 2px 2px;  
+}
+p{
+    display: flex;
 }
